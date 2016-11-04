@@ -47,3 +47,9 @@ shiny::runGitHub("Ridesharing", "holek10")
 ```
 ## Licensing 
 The app is provided for free under GNU General Public License
+
+## TO DO :
+The app is under development, and the following items are still on backlog:
+- every time user generates new route the old one should be overwritten/destroyed
+- remove routing control for 3 nearest routes (connected to first issue)
+- research method to combine RStudio Leaflet package with Leaflet Routing Machine (or wait until somebody comes up with R package for LRM :) 
