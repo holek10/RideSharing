@@ -16,8 +16,6 @@ calculateDistance <- function(latLng, waypoints, method = "euclidean") {
   for (i in c(1:waypointsDim) ) {
     difference[i,] <- latLng - waypoints[i,]
   }
-  #minDistance <- min(rowSums(tempMatrix))
-  
   # select method for calculating the distance (default: Euclidean distance)
   if (method == "euclidean") minDistance <- min(sqrt(rowSums(difference^2)))
   else if (method == "manhattan") minDistance <- min(rowSums(abs(difference)))
@@ -133,7 +131,7 @@ ui <- navbarPage("Ridesharing with your friends",
           tags$head(tags$link(rel = "stylesheet",  href = "http://www.liedman.net/leaflet-routing-machine/dist/leaflet-routing-machine.css")),
           tags$head(tags$script(src="http://www.liedman.net/leaflet-routing-machine/dist/leaflet-routing-machine.js")),
           
-          # iniate Leaflet map with default settings
+          # initiate Leaflet map with default settings
           tags$div(id = "map"),
           includeScript("map.js"),
           tags$style(".leaflet {height: 100%; width: 100%;} "),
