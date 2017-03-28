@@ -5,7 +5,7 @@
 This repository contains the source code for an interactive app that allows for finding a friend from your work who can give you a lift there and back. Obviosuly the concept can be extended to any environment and adjusted to fit the purpose.
 
 ## About
-The app is built using [R](http://www.r-project.org) and [Shiny](http://shiny.rstudio.com) web framework , utilizing [Leaflet](http://www.leafletjs.com) maps and [Leaflet Routing Machine](http://www.liedman.net/leaflet-routing-machine/) with custom tile from [Mapbox] (http://www.mapbox.com).
+The app is built using [R](http://www.r-project.org) and [Shiny](http://shiny.rstudio.com) web framework , utilizing [Leaflet](http://www.leafletjs.com) maps and [Leaflet Routing Machine](http://www.liedman.net/leaflet-routing-machine/) with custom tile from [Mapbox](http://www.mapbox.com).
 
 ## Data source
 Currently the dummy data are used and stored locally in *.rds* file.  
