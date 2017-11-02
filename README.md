@@ -14,9 +14,9 @@ Refer to [this guideline](http://deanattali.com/blog/shiny-persistent-data-stora
 ## The idea behind
 In one sentence: show 3 nearest routes from home to work compared to my route.  
 
-Location of end point (office, work address) is already fixed on the map - 'Company headquarter'. A user is supposed to enter his/her home location (address) to automatically plot the optimal route. The route should be then adjusted to reflect true way of communiting between home and work.  Every adjustment adds new waypoint which is valuable for determining the nearest route. 
+Location of end point (office, work address) is already fixed on the map - 'Company headquarter'. A user is asked to enter their home location (address) to automatically plot the optimal route. The route should be then adjusted to reflect true way of communiting between home and work. Every adjustment adds new waypoint which is valuable for determining the nearest route. 
 
-The nearest route is minimum distance between home location (latitude and longitude) and routes (waypoints) of all other users in the database. The default metric is Euclidean distance, which can be changed to Manhattan, Quadrance or ordinary mathematical difference.
+The nearest route is chosen based on the minimum distance between home location (latitude and longitude) and routes (waypoints) of all other users in the database. The default metric is Euclidean distance, which can be changed to Manhattan, Quadrance or ordinary mathematical difference. The chosen metric is a measure of distance on a flat plane, and provides good approximation for distance calculation on a sphere for relatively small distances (say, up to 100 km). For exact distance one should use [Harvesine formula](https://en.wikipedia.org/wiki/Haversine_formula) or similar metric. 
 ```R
 calculateDistance <- function(latLng, waypoints, method = "euclidean") {
   # calculate difference between two locations (home and all other stored route waypoints)
